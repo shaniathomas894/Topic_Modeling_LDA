@@ -24,9 +24,9 @@ After cleaning and EDA which showed exponential increase in posts beginning in 2
 
 #### Modeling
 
-The first parameter of the LDA model is the dictionary. Using the .Dictionary method, Gensim sweeps through the corpus, giving each token an ID. Secondly, the model needs a corpus which is a vector. Using the .doc2bow() method, gensim converts each document into a vector the size of however many unique tokens there are in the corpus. The corpus output is then a list of tuples. The last required parameter for model training is the number of topics. When training, I trained with 3-5 topics depending on topic overlap.
+The first parameter of the LDA model is the dictionary. Using the .Dictionary method, Gensim sweeps through the corpus, giving each token an ID. Secondly, the model needs a corpus which is a vector. Using the .doc2bow() method, Gensim converts each document into a vector the size of however many unique tokens there are in the corpus. The corpus output is then a list of tuples. The last required parameter for model training is the number of topics. When training, I trained with 3-5 topics depending on topic overlap.
 
-I trained an LDA model on the entire corpus with posts from 2013-2022, then on the individual years of 2019, 2020, and 2021, I chose these years because 2019 is when the exponential increase began, and I was curious if the pandemic or other world events had an effect on the topics. I visualized the results of each model using pyLDAvis package.
+I trained an LDA model on the entire corpus with posts from 2013-2022, then on the individual years of 2019, 2020, and 2021, I chose these years because 2019 is when the exponential increase began, and I was curious if the pandemic or other world events had an effect on the topics. I visualized the results of each model using the pyLDAvis package.
 
 #### Reading the pyLDAvis
 
@@ -38,8 +38,7 @@ The relevance metric slider, denoted with a lambda, ranges on a scale of 0.0 to 
 
 ## Conclusions
 All in all, there are three recurring root causes of employees being unhappy at their workplaces. The most consistent topics were the employees' time, financial stability, and systemic concerns within their workplace. The concerns of time were incredibly and profoundly consistent, whereas the concerns of financial stability had slight change throughout the years, and the systemic concerns varied as the years went on. Below are specific conclusions and recommendations on these concerns.
-
-When it came to the topic of time, this was the number 1 topic  in the entire corpus, and consistently the number 1 topic in every model for the years 2019-2021. Terms that continuously appeared when discussing time were:
+The topic of time was the #1 topic in the entire corpus, and consistently the number 1 topic in every model for the years 2019-2021. Terms that continuously appeared when discussing time were:
 - day, 
 - hour, 
 - week, 
@@ -85,4 +84,4 @@ Lastly, the third most consistent topic was centered around systemic concerns. S
 While these terms were found consistently, the specifics of the systemic concerns changed between 2019 and 2021 depending on what was going on in the world at the time. The biggest recommendation to remedy this topic is to host surveys that are without reprimand that allow for data to be collected and changes to be made. Without reprimand includes not requiring employee time on trainings that wont' benefit the employees as well because taking time is a reprimand. When big events are happening, such as a pandemic, employers could ask employees if they feel physically and mentally safe in the workplace, and/or what could make them feel safer. Employers could make it systemic to be concerned about their employees instead of employees being concerned about the systemics of their employers.
 
 ## Next Steps
-This model can be fed new documents without having to be retrained, so I would continue to monitor r/Antiwork and add documents to the corpus. This would allow me to see how the topics are shifting, or remaining the same, with time. I would also like to extract text from images as there a lot of meaningful words within the images, and I would also like to retrain the model using n grams, including other stop words that can be throwing the model off, and increasing the iterations of the model during training.
+This model can be fed new documents without having to be retrained, so I would continue to monitor r/Antiwork and add documents to the corpus. This would allow me to see how the topics are shifting, or remaining the same, with time. I would also like to extract text from images as there a lot of meaningful words within the images. Additionally, I would like to retrain the model using n grams, including other stop words that can be throwing the model off, and increasing the iterations of the model during training.

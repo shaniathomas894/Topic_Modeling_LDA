@@ -34,7 +34,12 @@ pyLDAvis is a visualization method used to simplify visualizing the topics the L
 
 On the right side, the most common terms are shown. If no topic is selected, it's the most common terms of the whole corpus. When you select a topic from the left, the terms most prevalent to that topic appear. The red bar is showing how the frequency of that term within that topic, whereas the blue bar is showing the term frequency within the corpus. If you hover/click a term, the topic circles where that term is found grow larger. The larger the circle, the more frequently that word is in that topic.
 
-The relevance metric slider, denoted lambda, ranges on a scale of 0.0 to 1.0. As you move the scale towards 0, the terms that will appear are more exclusive to the topic that is selected meaning you will start to see more red bars. As the scale is moved toward 1, the terms that appear are not only relevant to the topic, but to the corpus as a whole.
+The relevance metric slider, denoted lambda, ranges on a scale of 0.0 to 1.0. As you move the scale towards 0, the terms that will appear are more exclusive to the topic that is selected meaning you will start to see more red bars. As the scale is moved toward 1, the terms that appear are not only relevant to the topic, but to the corpus as a whole. 
+
+Interactive versions of this visualization can be found in the "webpages" folder of this repository, but below is a snapshot of the pyLDAvis.
+![image](https://github.com/user-attachments/assets/d776415f-2f04-409e-8d7f-5a51ebe9b059)
+
+
 
 ## Conclusions
 All in all, there are three recurring root causes of employees being unhappy at their workplaces. The most consistent topics were the employees' time, financial stability, and systemic concerns within their workplace. The concerns of time were incredibly and profoundly consistent, whereas the concerns of financial stability had slight change throughout the years, and the systemic concerns varied as the years went on. Below are specific conclusions and recommendations on these concerns.
